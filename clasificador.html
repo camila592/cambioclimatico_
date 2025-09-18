@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cambio Climatico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='clasificador.css') }}">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Cambio Climático</div>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/info">Información</a></li>
+            <li><a href="/clasificador">Especies</a></li>
+            <li><a href="/calculadora">Calculadora</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Clasificador de Especies en Peligro</h1>
+        <p>Subí una imagen para identificar la especie y aprender cómo ayudarla.</p>
+
+        <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput" accept="image/*" required>
+            <button type="submit">Clasificar</button>
+        </form>
+
+        <!-- Contenedor para la vista previa -->
+        <div id="previewContainer" style="margin-top:20px; display:flex; justify-content:center;">
+            <div id="previewBox"
+                style="background-color:#fff; padding:15px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.3); display:none;">
+                <img id="previewImage" src="" alt="Vista previa" style="max-width:100%; border-radius:10px;">
+            </div>
+        </div>
+
+        <!-- Contenedor para el resultado -->
+        <div id="resultContainer" style="margin-top:20px; font-size:1.3rem; font-weight:600;"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
