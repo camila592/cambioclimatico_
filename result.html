@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Cambio Climático</div>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/info">Información</a></li>
+            <li><a href="/clasificador">Especies</a></li>
+            <li><a href="/calculadora">Calculadora</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <div class="container">
+        <h1>Resultado de la Clasificación</h1>
+        <h2>Especie detectada: {{ species }}</h2>
+        <p><strong>Descripción:</strong> {{ description }}</p>
+        <p><strong>Cómo ayudar:</strong> {{ ayuda }}</p>
+        <p><strong>Beneficios al medioambiente:</strong> {{ beneficio }}</p>
+
+        <!-- Imagen en contenedor blanco -->
+        <div id="resultImageBox">
+            <img src="{{ img_url }}" alt="image" id="resultImage">
+        </div>
+
+        <a class="btnGo" href="/clasificador">Volver</a>
+    </div>
+</body>
+
+</html>
