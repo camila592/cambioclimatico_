@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Información - Cambio Climático</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='informacion.css') }}">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Cambio Climático</div>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/info">Información</a></li>
+            <li><a href="/clasificador">Especies</a></li>
+            <li><a href="/calculadora">Calculadora</a></li>
+        </ul>
+    </nav>
+
+    <!-- ENCABEZADO -->
+    <header class="header-info">
+        <h1>Información sobre el Cambio Climático</h1>
+        <p>El cambio climático es uno de los mayores desafíos de nuestro tiempo. Conoce sus causas, consecuencias y lo que podemos hacer para combatirlo.</p>
+    </header>
+
+    <!-- SECCIONES DE INFO -->
+    <main class="info-sections">
+        <section>
+            <h2>¿Qué es el cambio climático?</h2>
+            <p>El cambio climático se refiere a las alteraciones a largo plazo de las temperaturas y patrones climáticos de la Tierra, causadas principalmente por las actividades humanas como la quema de combustibles fósiles y la deforestación.</p>
+        </section>
+
+        <section>
+            <h2>Consecuencias</h2>
+            <ul>
+                <li>Aumento de las temperaturas globales.</li>
+                <li>Fenómenos extremos: huracanes, sequías e inundaciones.</li>
+                <li>Pérdida de biodiversidad y ecosistemas.</li>
+                <li>Impacto en la salud, la agricultura y la economía.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>¿Qué podemos hacer?</h2>
+            <p>Existen muchas acciones que, sumadas, pueden marcar la diferencia:</p>
+            <ul>
+                <li>Usar energías renovables.</li>
+                <li>Reducir, reutilizar y reciclar.</li>
+                <li>Consumir de forma responsable.</li>
+                <li>Proteger los bosques y la biodiversidad.</li>
+            </ul>
+        </section>
+
+        <div class="btn-center">
+            <a class="btnGo" href="/calculadora">Calcula tu huella de carbono</a>
+        </div>
+    </main>
+</body>
+
+</html>
