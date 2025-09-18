@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:wght@300;700&family=Playfair+Display:wght@400;600&family=Work+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    color: #1c1c1c;
+    background-color: #f4f9f4;
+}
+
+/* NAVBAR */
+nav {
+    height: 70px;
+    background-color: rgba(23, 131, 50, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+nav .logo {
+    font-family: "Abril Fatface", cursive;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-weight: 600;
+}
+
+nav a {
+    font-family: "Work Sans", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d8ffd8;
+}
+
+/* HEADER */
+.header-info {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('banner.jpg') no-repeat center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.header-info h1 {
+    font-family: "Abril Fatface", cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.header-info p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* INFO SECTIONS */
+.info-sections {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.info-sections section {
+    margin-bottom: 50px;
+}
+
+.info-sections h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: rgb(23, 131, 50);
+}
+
+.info-sections p,
+.info-sections li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* LISTA */
+.info-sections ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* BOTÓN */
+.btn-center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btnGo {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: rgb(23, 131, 50);
+    font-family: "Merriweather", serif;
+    color: #f4f9f4;
+    font-weight: 600;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btnGo:hover {
+    background-color: #19612f;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .header-info h1 {
+        font-size: 2.3rem;
+    }
+
+    .header-info p {
+        font-size: 1rem;
+    }
+
+    .info-sections h2 {
+        font-size: 1.6rem;
+    }
+}

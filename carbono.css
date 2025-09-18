@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300..700;1,300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tigerCalc {
+    font-family: "Work Sans", sans-serif;
+    color: #fff;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('tiger.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    color: #fff;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+nav {
+    height: 70px;
+    background-color: rgba(23, 131, 50, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-weight: 600;
+}
+
+nav li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav a {
+    font-family: "Work Sans", sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #f4f9f4;
+}
+
+nav .logo {
+    font-family: "Abril Fatface", cursive;
+    font-size: 1.8rem;
+}
+/* Encabezados */
+
+h1 {
+    font-family: "Abril Fatface", cursive;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align:center;
+}
+
+p {
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align:center;
+}
+
+h2 {
+    font-family: "Abril Fatface", cursive;
+    margin: 20px 0;
+    font-size: 1.8em;
+    color: #2b7a0b;
+    text-align:center;
+}
+
+h3 {
+    font-family: "Playfair Display", serif;
+    margin-top: 25px;
+    font-size: 1.4em;
+    color: #2b7a0b;
+    text-align:center;
+}
+
+/* 📋 Formularios */
+form {
+    background: #ffffff;
+    padding: 25px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2b2b2b;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Botones */
+button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 18px;
+    background: #2b7a0b;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    align-items: center;
+}
+
+button:hover {
+    background: #1e5807;
+}
+
+/* 📌 Tips */
+.tipUl {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.tipLi {
+    background: #f0fdf4;
+    border-left: 6px solid #2b7a0b;
+    margin: 12px auto;
+    padding: 12px;
+    width: 85%;
+    text-align: left;
+    border-radius: 6px;
+    font-size: 0.95em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    form {
+        width: 95%;
+    }
+
+    li {
+        width: 95%;
+    }
+}

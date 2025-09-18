@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300..700;1,300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    color: #fff;
+}
+
+/* NAVBAR */
+nav {
+    height: 70px;
+    background-color: rgba(23, 131, 50, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-weight: 600;
+}
+
+nav li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav a {
+    font-family: "Work Sans", sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #f4f9f4;
+}
+
+/* HERO SECTION */
+.container {
+    height: calc(100vh - 70px);
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('tiger.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.container div:first-child {
+    max-width: 600px;
+}
+
+/* TEXTOS */
+h1 {
+    font-family: "Abril Fatface", cursive;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+/* BOTÓN */
+.btnGo {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: rgb(23, 131, 50);
+    font-family: "Merriweather", serif;
+    color: #f4f9f4;
+    font-weight: 600;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btnGo:hover {
+    background-color: #19612f;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+}
