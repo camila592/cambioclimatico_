@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='carbono.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">Cambio Climático</div>
+        <ul>
+            <li><a href="/" class="linkNav">Inicio</a></li>
+            <li><a href="/info" class="linkNav">Información</a></li>
+            <li><a href="/clasificador" class="linkNav">Especies</a></li>
+            <li><a href="/calculadora" class="linkNav">Calculadora</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Resultado de tu huella</h2>
+        <h3>Tu huella de carbono anual estimada es:</h3>
+        <h2>{{ total }} kg CO₂e</h2>
+
+        {% if tips %}
+        <h3>Consejos para reducir tu impacto:</h3>
+        <ul class="tipUl">
+            {% for tip in tips %}
+                <li class="tipLi">{{ tip }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <a href="/">Volver a la calculadora</a>
+    </div>
+</body>
+</html>
