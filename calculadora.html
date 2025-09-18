@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cambio Climatico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='carbono.css') }}">
+</head>
+
+<body class="tigerCalc">
+    <nav>
+        <div class="logo">Cambio Climático</div>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/info">Información</a></li>
+            <li><a href="/clasificador">Especies</a></li>
+            <li><a href="/calculadora">Calculadora</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Calculadora de huella de carbono</h1>
+        <p>Completa el formulario y podrás tener una aproximación de cuanto carbono emitis por semana.</p>
+
+        <form id="uploadForm" action="/calcular" method="POST">
+            <label>Kilómetros en auto por semana:</label>
+            <input type="number" step="0.1" name="km_auto" required><br>
+
+            <label>Kilómetros en transporte público por semana:</label>
+            <input type="number" step="0.1" name="km_publico" required><br>
+
+            <label>Consumo mensual de electricidad (kWh):</label>
+            <input type="number" step="0.1" name="kwh_mes" required><br>
+
+            <label>Comidas con carne por semana:</label>
+            <input type="number" name="comidas_carne" required><br>
+
+            <button type="submit">Clasificar</button>
+        </form>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
